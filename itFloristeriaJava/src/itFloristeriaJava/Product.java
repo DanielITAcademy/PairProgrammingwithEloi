@@ -13,5 +13,4 @@ public abstract class Product {
 		return "Product [price=" + price + "]";
 	}
 	
-	
 }
