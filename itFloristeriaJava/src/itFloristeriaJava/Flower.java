@@ -1,39 +1,33 @@
 package itFloristeriaJava;
 
-public class Flower {
+public class Flower extends Product{
 	
 	private String color;
-	private int price;
-	
-	public Flower() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-	
-	public Flower(String color, int price) {
-		super();
+
+	public Flower(String color, double price) {
+		super(price);
 		this.color = color;
-		this.price = price;
 	}
 
+	
+	
 	public String getColor() {
 		return color;
 	}
+
+
+
 	public void setColor(String color) {
 		this.color = color;
 	}
-	public int getPrice() {
-		return price;
-	}
-	public void setPrice(int price) {
-		this.price = price;
-	}
-	
-	
+
+
+
 	@Override
 	public String toString() {
-		return "Flower [color=" + color + ", price=" + price + "]";
+		return "Flower [color=" + color + "]";
 	}
-
+	
+	
 
 }

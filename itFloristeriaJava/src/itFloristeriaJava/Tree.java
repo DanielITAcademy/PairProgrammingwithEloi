@@ -1,9 +1,9 @@
 package itFloristeriaJava;
 
-public class Tree {
+public class Tree extends Product {
 	private double height;
 
-	public Tree(double height,double price) {
+	public Tree(double height, double price) {
 		super(price);
 		this.height = height;
 	}
@@ -18,8 +18,9 @@ public class Tree {
 
 	@Override
 	public String toString() {
-		return "Tree [height=" + height + ", getHeight()=" + getHeight() + "]";
+		return "Tree [height=" + height + "]";
 	}
+	
 	
 	
 

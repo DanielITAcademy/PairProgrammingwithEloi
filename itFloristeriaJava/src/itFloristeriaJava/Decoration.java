@@ -1,16 +1,11 @@
 package itFloristeriaJava;
 
-public class Decoration {
+public class Decoration extends Product {
 	
 	private String material;
 
-	public Decoration() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-	
-	public Decoration(String material) {
-		super();
+	public Decoration(String material, double price) {
+		super(price);
 		this.material = material;
 	}
 
@@ -27,5 +22,7 @@ public class Decoration {
 	public String toString() {
 		return "Decoration [material=" + material + "]";
 	}
+	
+	
 	
 }

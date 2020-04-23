@@ -7,8 +7,17 @@ public class Main {
 		int prueba = 8;
 		System.out.println(prueba);
 		
+		//llamamos a función crear floristería
 		createFlowerShop();
 		
+		//llamamos a función añadir arbol
+		addTree();
+		
+		
+	}
+
+	private static void addTree() {
+		// TODO Auto-generated method stub
 		
 	}
 
