@@ -64,15 +64,17 @@ public class Main {
 
 	private static void addTree(List<FlowerShop> flowerShops) {
 		Scanner sc = new Scanner(System.in);
-		
+		double h, p;
+		String name;
+		Tree t;
 		System.out.println("Introduce the height of the tree");
-		double h = sc.nextDouble();
+		h = sc.nextDouble();
 		System.out.println("Introduce the price of the tree");
-		double p = sc.nextDouble();
-		Tree t = new Tree(h, p);
+		p = sc.nextDouble();
+		t = new Tree(h, p);
 		
 		System.out.println("Write the name of the flowerShop to add the tree" + flowerShops.toString());
-		String name = sc.next();
+		name = sc.next();
 		for (FlowerShop fs : flowerShops) {
 			if (name.equals(fs.getName())) {
 				fs.getTrees().add(t);
@@ -82,11 +84,12 @@ public class Main {
 
 	private static void createFlowerShop(List<FlowerShop> flowerShops) {
 		Scanner sc = new Scanner(System.in);
+		String name;
 		FlowerShop flowershop;
 
 		System.out.println("Insert the company name: ");
 
-		String name = sc.next();
+		name = sc.next();
 		flowershop = new FlowerShop(name);
 		flowerShops.add(flowershop);	
 	}
