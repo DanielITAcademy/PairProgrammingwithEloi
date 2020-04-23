@@ -35,12 +35,31 @@ public class Main {
 		// TODO Auto-generated method stub
 		
 	}
+	
 
 	private static void addDecoration() {
-		// TODO Auto-generated method stub
-		
-		
+	
+		int material;
+		System.out.println("Insert material : 1-Wood 2-Plastic");
+		Scanner sc = new Scanner(System.in);
+		material = sc.nextInt();
+		switch (material) {
+		case 1:
+			System.out.println("Wood");
+			break;
+		case 2:
+			System.out.println("Plastic");
+			break;
+
+
+		default:
+			System.out.println("Men!! Just you have two posibilities!!");
+			break;
+		}
+
 	}
+	
+	   
 
 	private static void addTree() {
 		// TODO Auto-generated method stub
@@ -50,7 +69,7 @@ public class Main {
 	private static void createFlowerShop(List<FlowerShop> flowerShops) {
 		Scanner sc = new Scanner(System.in);
 		FlowerShop flowershop;
-		System.out.println("Introduce el nombre de la empresa: ");
+		System.out.println("Insert the company name: ");
 		String name = sc.next();
 		flowershop = new FlowerShop(name);
 		flowerShops.add(flowershop);		
