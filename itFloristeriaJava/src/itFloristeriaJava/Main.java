@@ -1,14 +1,18 @@
 package itFloristeriaJava;
 
+import java.util.List;
+import java.util.Scanner;
+import java.util.ArrayList;
+
 public class Main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		int prueba = 8;
-		System.out.println(prueba);
+		List<FlowerShop> flowerShops = new ArrayList();
+		FlowerShop fs = new FlowerShop ("Floristeria Fernandez");
+		flowerShops.add(fs);
 		
 		//llamamos a función crear floristería
-		createFlowerShop();
+		createFlowerShop(flowerShops);
 		
 		//llamamos a función añadir arbol
 		addTree();
@@ -43,9 +47,13 @@ public class Main {
 		
 	}
 
-	private static void createFlowerShop() {
-		// TODO Auto-generated method stub
-		
+	private static void createFlowerShop(List<FlowerShop> flowerShops) {
+		Scanner sc = new Scanner(System.in);
+		FlowerShop flowershop;
+		System.out.println("Introduce el nombre de la empresa: ");
+		String name = sc.next();
+		flowershop = new FlowerShop(name);
+		flowerShops.add(flowershop);		
 	}
 	
 
