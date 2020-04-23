@@ -24,7 +24,7 @@ public class Main {
 		addFlower(flowerShops);
 		
 		// llamamos a funcion stock
-		showStock();
+		showStock(flowerShops);
 	}
 
 	private static void addFlower(List<FlowerShop> flowerShops) {
