@@ -13,6 +13,28 @@ public class Main {
 		//llamamos a función añadir arbol
 		addTree();
 		
+		// llamamos a funcion añadir decoración
+		addDecoration();
+		
+		// llamamos a funcion producto
+		addProduct();
+		// llamamos a funcion stock
+		showStock();
+	}
+
+	private static void showStock() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private static void addProduct() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private static void addDecoration() {
+		// TODO Auto-generated method stub
+		
 		
 	}
 
@@ -25,5 +47,6 @@ public class Main {
 		// TODO Auto-generated method stub
 		
 	}
+	
 
 }
