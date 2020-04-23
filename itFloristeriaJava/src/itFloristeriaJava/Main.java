@@ -15,13 +15,14 @@ public class Main {
 		createFlowerShop(flowerShops);
 		
 		//llamamos a función añadir arbol
-		addTree();
+		addTree(flowerShops);
 		
 		// llamamos a funcion añadir decoración
 		addDecoration();
 		
 		// llamamos a funcion producto
 		addProduct();
+		
 		// llamamos a funcion stock
 		showStock();
 	}
@@ -42,18 +43,31 @@ public class Main {
 		
 	}
 
-	private static void addTree() {
-		// TODO Auto-generated method stub
+	private static void addTree(List<FlowerShop> flowerShops) {
+		Scanner sc = new Scanner(System.in);
 		
+		System.out.println("Introduce the height of the tree");
+		double h = sc.nextDouble();
+		System.out.println("Introduce the price of the tree");
+		double p = sc.nextDouble();
+		Tree t = new Tree(h, p);
+		
+		System.out.println("Write the name of the flowerShop to add the tree" + flowerShops.toString());
+		String name = sc.next();
+		for (FlowerShop fs : flowerShops) {
+			if (name.equals(fs.getName())) {
+				fs.getTrees().add(t);
+			}
+		}
 	}
 
 	private static void createFlowerShop(List<FlowerShop> flowerShops) {
 		Scanner sc = new Scanner(System.in);
 		FlowerShop flowershop;
-		System.out.println("Introduce el nombre de la empresa: ");
+		System.out.println("Introduce el nombre de la tienda: ");
 		String name = sc.next();
 		flowershop = new FlowerShop(name);
-		flowerShops.add(flowershop);		
+		flowerShops.add(flowershop);	
 	}
 	
 
