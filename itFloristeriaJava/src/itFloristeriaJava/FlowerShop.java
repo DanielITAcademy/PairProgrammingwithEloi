@@ -56,8 +56,7 @@ public class FlowerShop {
 
 	@Override
 	public String toString() {
-		return "FlowerShop [name=" + name + ", Flowers=" + Flowers + ", Trees=" + Trees + ", Decorations=" + Decorations
-				+ "]";
+		return "FlowerShop name=" + name;
 	}
 	
 }

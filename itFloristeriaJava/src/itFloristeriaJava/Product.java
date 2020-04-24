@@ -10,7 +10,8 @@ public abstract class Product {
 
 	@Override
 	public String toString() {
-		return "Product [price=" + price + "]";
+		return " Product price = " + price;
 	}
+	
 	
 }

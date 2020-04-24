@@ -18,8 +18,9 @@ public class Tree extends Product {
 
 	@Override
 	public String toString() {
-		return "Tree [height=" + height + "]";
+		return "Tree height = " + height + " " + super.toString();
 	}
+
 	
 	
 	

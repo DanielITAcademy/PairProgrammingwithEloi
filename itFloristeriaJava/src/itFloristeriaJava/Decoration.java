@@ -16,12 +16,14 @@ public class Decoration extends Product {
 	public void setMaterial(String material) {
 		this.material = material;
 	}
-	
-	
+
 	@Override
 	public String toString() {
-		return "Decoration [material=" + material + "]";
+		return "Decoration material = " + material + " " + super.toString();
 	}
+	
+	
+
 	
 	
 	

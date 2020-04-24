@@ -10,6 +10,13 @@ public class Main {
 		List<FlowerShop> flowerShops = new ArrayList();
 		FlowerShop fs = new FlowerShop ("FloristeriaFernandez");
 		flowerShops.add(fs);
+		Tree t = new Tree (15 , 20);
+		Flower f = new Flower ("blue", 15);
+		Decoration d = new Decoration ("Wood", 20);
+		fs.getTrees().add(t);
+		fs.getFlowers().add(f);
+		fs.getDecorations().add(d);
+		
 		
 		//llamamos a función crear floristería
 		createFlowerShop(flowerShops);
@@ -37,7 +44,7 @@ public class Main {
 			double p = sc.nextDouble();
 			Flower f = new Flower(c, p);
 			
-			System.out.println("Write the name of the flowerShop to add the flower" + flowerShops.toString());
+			System.out.println("Write the name of the flowerShop to add the flower" + flowerShops.toString() +"?");
 			String name = sc.next();
 			for (FlowerShop fs : flowerShops) {
 				if (name.equals(fs.getName())) {
@@ -47,7 +54,16 @@ public class Main {
 		}
 
 	private static void showStock(List<FlowerShop> floristerias) {
-		System.out.println(floristerias.toString());
+		//System.out.println(floristerias.toString());
+		
+		for (FlowerShop fs : floristerias) {
+			System.out.println("FlowerShop: " + fs.getName() + "\n");
+			System.out.println("Trees: " + fs.getTrees() + "\n");
+			System.out.println("Flower: " + fs.getFlowers() + "\n");
+			System.out.println("Decorations: " + fs.getDecorations() + "\n");
+			
+			
+		}
 		
 	}
 
@@ -82,7 +98,7 @@ public class Main {
 		System.out.println("Introduce the price of the decoration");
 		price = sc.nextDouble();
 		Decoration dec= new Decoration(product,price);
-		System.out.println("Write the name of the flowerShop to add the tree" + flowerShops.toString());
+		System.out.println("Write the name of the flowerShop to add the tree" + flowerShops.toString() + "?");
 		String name = sc.next();
 		for (FlowerShop fs : flowerShops) {
 			if (name.equals(fs.getName())) {
@@ -106,7 +122,7 @@ public class Main {
 		p = sc.nextDouble();
 		t = new Tree(h, p);
 		
-		System.out.println("Write the name of the flowerShop to add the tree" + flowerShops.toString());
+		System.out.println("Write the name of the flowerShop to add the tree" + flowerShops.toString() +"?");
 		name = sc.next();
 		for (FlowerShop fs : flowerShops) {
 			if (name.equals(fs.getName())) {
